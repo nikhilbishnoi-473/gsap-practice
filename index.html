@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #000;
+            border-radius: 40px;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-color: #000;
+            border-radius: 40px;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        #textone {
+            color: red;
+        }
+
+        #texttwo {
+            color: red;
+        }
+
+        .cardone {
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            border-radius: 200px;
+            padding: 15px;
+        }
+    </style>
+    <div class="box" id="home">
+    </div>
+    <div class="box2" id="home2">
+    </div>
+    <div class="d-flex">
+        <h1 id="textone">hello</h1>
+        <h1 id="texttwo">world</h1>
+    </div>
+    <div class="cardone">
+        
+    </div>
+    <div class=""></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        gsap.fromTo(
+            ".cardone",
+            {
+                xPercent: 0,
+                scale: 1,
+                rotation: 0,
+
+            }, {
+            xPercent: 300,
+            duration: 4,
+            backgroundColor: "red",
+            scale: 1.3,
+            rotation : 360,
+            repeat : 5,
+            yoyo : true,
+            // opacity: 0
+        }
+
+        )
+      
+        gsap.fromTo(
+            "#textone",
+            {
+                xPercent: 0,
+
+            },
+            {
+                xPercent: 500,
+                duration: 20,
+                color: "green",
+                repeat: 4,
+                yoyo: true
+
+            }
+        )
+        gsap.fromTo(
+            "#texttwo",
+            {
+                xPercent: 1000,
+
+            }, {
+            xPercent: 430,
+            duration: 20,
+            color: "green",
+            repeat: 4,
+            yoyo: true
+        }
+        )
+        gsap.fromTo(
+            "#home",
+            {
+                xPercent: 0,
+                backgroundColor: "#000",
+            },
+            {
+                xPercent: 840,
+                duration: 2,
+                backgroundColor: "#ff0000",
+                yoyo: true,
+                repeat: 3,
+            }
+        );
+
+
+        gsap.from(
+            "#home2",
+            {
+                xPercent: 840,
+                backgroundColor: "#000",
+            },
+            {
+                xPercent: 0,
+                duration: 2,
+                backgroundColor: "#00ff00",
+                yoyo: true,
+                repeat: 3,
+            }
+        );
+
+
+        gsap.fromTo(
+            "#home2",
+            {
+                xPercent: 840,
+            },
+            {
+                xPercent: 0,
+                rotation: 300,
+                duration: 4,
+                backgroundColor: "#00ff00",
+                yoyo: true,
+                repeat: 3,
+            }
+        );
+    </script>
+</body>
+
+</html>
