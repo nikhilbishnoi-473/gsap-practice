@@ -71,8 +71,14 @@
             padding: 10px;
             background: #cf5a0c;
         }
-    </style>
 
+        .box5 {
+            width: 120px;
+            height: 120px;
+            background-color: rgb(113, 35, 196);
+        }
+    </style>
+    <div class="box5"></div>
     <div class="box" id="home">
     </div>
     <div class="box2" id="home2">
@@ -91,6 +97,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
+        gsap.to(".box5", { rotation: 270, x: 1300, duration: 1, repeat: -1, duration: 10, yoyo: true, borderRadius: "50%", backgroundColor: "red", });
 
         gsap.fromTo(
             ".text_1", {
@@ -99,7 +106,8 @@
             {
                 rotation: 360,
                 duration: 3,
-                repeat:-1
+                repeat: -1,
+
             }
         )
         gsap.fromTo(
@@ -156,7 +164,7 @@
                 repeat: -1,
                 yoyo: true,
                 duration: 2,
-
+                ease: "bounce.out",
             }
         );
 
@@ -188,7 +196,8 @@
                 duration: 3,
                 color: "green",
                 repeat: -1,
-                yoyo: true
+                yoyo: true,
+                ease: "bounce.out",
             }
         );
 
@@ -201,23 +210,24 @@
             duration: 3,
             color: "green",
             repeat: -1,
-            yoyo: true
+            yoyo: true,
+            ease: "bounce.out",
         });
 
         gsap.fromTo(
-    "#home",
-    {
-        xPercent: 0,
-        backgroundColor: "#000",
-    },
-    {
-        xPercent: 840,
-        duration: 2,
-        backgroundColor: "#ff0000",
-        yoyo: true,        
-        repeat: -1,      
-    }
-);
+            "#home",
+            {
+                xPercent: 0,
+                backgroundColor: "#000",
+            },
+            {
+                xPercent: 840,
+                duration: 2,
+                backgroundColor: "#ff0000",
+                yoyo: true,
+                repeat: -1,
+            }
+        );
 
         gsap.fromTo(
             "#home2",
@@ -232,6 +242,7 @@
                 backgroundColor: "#00ff00",
                 yoyo: true,
                 repeat: -1,
+                ease: "bounce.out",
             }
         );
     </script>
